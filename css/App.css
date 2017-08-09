@@ -1,11 +1,20 @@
+body {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+
+
+}
+
 .Template {
     text-align: center;
-    margin-top: 20%;
+    margin-top: 25%;
     font-size: 32px;
 }
 
 .Template-title {
     font-size: 48px;
+    line-height: 160px;
 }
 
 .Clock-days,
