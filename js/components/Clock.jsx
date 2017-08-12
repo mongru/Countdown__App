@@ -44,13 +44,13 @@ class Clock extends React.Component {
         return (
 
             <div>
-                <div className="Clock-days">{this.leading0(this.state.days)}
+                <div className="Clock-days"><span>{this.leading0(this.state.days)} </span>
                     days</div>
-                <div className="Clock-hours">{this.leading0(this.state.hours)}
-                    hours</div>
-                <div className="Clock-minutes">{this.leading0(this.state.minutes)}
-                    minutes</div>
-                <div className="Clock-seconds">{this.leading0(this.state.seconds)}
+                <div className="Clock-hours"><span>{this.leading0(this.state.hours)} </span>
+                     hours</div>
+                <div className="Clock-minutes"><span>{this.leading0(this.state.minutes)} </span>
+                     minutes</div>
+                <div className="Clock-seconds"><span>{this.leading0(this.state.seconds)} </span>
                     seconds</div>
             </div>
 

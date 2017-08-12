@@ -24,12 +24,13 @@ class Template extends React.Component {
 
         return (
             <div className="Template">
-                <div className="Template-title">Countdown to {this.state.deadline}</div>
+                <div className="Template-title">Countdown to <span>{this.state.deadline}</span></div>
 
                 <Clock deadline={this.state.deadline}/>
 
                 <Form onSubmit={(e) => this.changeDeadline(e)} inline>
-                    <FormControl className="Deadline-input" placeholder='enter your deadline' onChange={event => this.setState({newDeadline: event.target.value})}/>
+                    <p className="Form-title">Enter your deadline</p>
+                    <FormControl className="Deadline-input" placeholder='December 31, 2017' onChange={event => this.setState({newDeadline: event.target.value})}/>
                     <Button onClick={(e) => this.changeDeadline(e)}>Submit</Button>
                 </Form>
 
