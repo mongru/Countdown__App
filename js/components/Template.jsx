@@ -17,7 +17,17 @@ class Template extends React.Component {
 
     changeDeadline(e) {
         e.preventDefault()
-        this.setState({deadline: this.state.newDeadline})
+
+        const checkDateInput = Date.parse(this.state.newDeadline);
+
+        if(isNaN(checkDateInput) == false) {
+            this.setState({deadline: this.state.newDeadline});
+
+        } else {
+            console.log("Invalid date input");
+            alert("Please enter a valid date in the following format: Month Day, Year");
+        }
+
     }
 
     render() {

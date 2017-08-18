@@ -37,6 +37,7 @@ class Clock extends React.Component {
         const days = Math.floor(time / (1000 * 60 * 60 * 24));
 
         this.setState({days, hours, minutes, seconds});
+
     }
 
     render() {
