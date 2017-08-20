@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../css/App.css';
 import Clock from './Clock.jsx';
+import Hourglass from './Hourglass.jsx';
+import Footer from './Footer.jsx';
 import {Form} from 'react-bootstrap';
 import {FormControl} from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
@@ -33,7 +35,8 @@ class Template extends React.Component {
     render() {
 
         return (
-            <div className="Template">
+            <div className="Template Template-box">
+                <Hourglass />
                 <div className="Template-title">Countdown to <span>{this.state.deadline}</span></div>
 
                 <Clock deadline={this.state.deadline}/>
@@ -43,7 +46,7 @@ class Template extends React.Component {
                     <FormControl className="Deadline-input" placeholder='December 31, 2017' onChange={event => this.setState({newDeadline: event.target.value})}/>
                     <Button onClick={(e) => this.changeDeadline(e)}>Submit</Button>
                 </Form>
-
+                <Footer />
             </div>
         )
     }

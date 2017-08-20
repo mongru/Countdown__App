@@ -2,12 +2,21 @@ body {
     display: flex;
     justify-content: center;
     overflow-x: hidden;
+    background-image: url('./../images/tim-gouw-68319.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 span {
-    color: red;
+    color: #ff0066;
 }
 
+.Template-box {
+    width: 100%;
+    height: 70%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
 .Template {
     text-align: center;
     margin-top: 25%;
@@ -15,12 +24,18 @@ span {
 }
 
 .Template-title {
+    margin-bottom: 20px;
     font-size: 48px;
+}
+
+.Template-title>span {
+    font-weight: bold;
 }
 
 .Form-title {
     margin-top: 30px;
     font-size: 24px;
+    padding-top: 10px;
 }
 
 .Form-title::after {
@@ -28,7 +43,7 @@ span {
     display: block;
     width: 300px;
     height: 2px;
-    background-color: red;
+    background-color: #ff0066;
     margin: 0 auto;
 }
 
@@ -38,6 +53,15 @@ span {
 .Clock-seconds {
     display: inline;
     margin: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+}
+
+.Clock-days>span,
+.Clock-hours>span,
+.Clock-minutes>span,
+.Clock-seconds>span {
+    font-weight: bold;
 }
 
 .Deadline-input {
@@ -46,6 +70,81 @@ span {
 }
 
 .form-control {
-    color: red;
+    color: #ff0066;
     font-size: 2rem;
+}
+
+.loader {
+  animation: loader 5s cubic-bezier(.8,0,.2,1) infinite;
+  height: 40px;
+  width: 41px;
+  position: absolute;
+  top: 20%;
+  left:calc(50% - 20px);
+}
+
+@keyframes loader {
+  90% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+
+.top {
+  animation: top 5s linear infinite;
+  border-top: 20px solid #ff0066;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  height: 0px;
+  width: 1px;
+  transform-origin: 50% 100%;
+}
+
+@keyframes top {
+  90% { transform: scale(0); }
+  100% { transform: scale(0);}
+}
+
+.bottom {
+  animation: bottom 5s linear infinite;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #ff0066;
+  border-left: 20px solid transparent;
+  height: 0px;
+  width: 1px;
+  transform: scale(0);
+  transform-origin: 50% 100%;
+}
+
+@keyframes bottom {
+  10% { transform: scale(0); }
+  90% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+.line {
+  animation: line 5s linear infinite;
+  border-left: 1px dotted #ff0066;
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+@keyframes line {
+  10% { height: 20px; }
+  100% { height: 20px; }
+}
+
+i {
+    color: white;
+    padding-top: 60px;
+}
+
+.footer__text {
+    font-size: 10px;
+    padding-top: 20px;
+}
+
+.footer__text a {
+    color: white;
 }
