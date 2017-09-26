@@ -2,27 +2,22 @@ body {
     display: flex;
     justify-content: center;
     overflow-x: hidden;
-    background-image: url('./../images/tim-gouw-68319.jpg');
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center center;
-    background-color: #ff0066;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.36);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.36) 0%, rgba(255, 173, 216, 0.36) 32%, #ff0066 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.36) 0%, rgba(255, 173, 216, 0.36) 32%, #ff0066 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.36) 0%, rgba(255, 173, 216, 0.36) 32%, #ff0066 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.36) 0%, rgba(255, 173, 216, 0.36) 32%, #ff0066 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.36) 0%, rgba(255, 173, 216, 0.36) 32%, #ff0066 100%);
 }
 
 span {
     color: #ff0066;
 }
 
-.Template-box {
-    width: 100%;
-    height: 80%;
-    padding: 5vw;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 2% 2%;
-}
 .Template {
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 20vh;
     font-size: 32px;
 }
 
@@ -41,37 +36,32 @@ span {
     /*padding-top: 10px;*/
 }
 
-/*.Form-title::after {
-    content: "";
-    display: block;
-    width: 300px;
-    height: 2px;
-    background-color: #ff0066;
-    margin: 0 auto;
-}*/
-
-.Clock-days,
-.Clock-hours,
-.Clock-minutes,
-.Clock-seconds {
+.Clock-days, .Clock-hours, .Clock-minutes, .Clock-seconds {
     display: inline;
     margin: 10px;
-    /*background-color: rgba(255, 255, 255, 0.8);*/
     padding: 10px;
     font-size: 2vw;
 }
 
-.Clock-days>span,
-.Clock-hours>span,
-.Clock-minutes>span,
-.Clock-seconds>span {
+.Clock-days>span, .Clock-hours>span, .Clock-minutes>span, .Clock-seconds>span {
     font-weight: bold;
     font-size: 4vw;
+    display: inline-block;
+    width: 8vw;
+    height: 8vw;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px 30px 20px 10px;
+    border-radius: 50%;
 }
 
 .Deadline-input {
     font-size: 25px;
     margin: 5px;
+}
+
+.Deadline-input::placeholder {
+    font-size: 12px;
+    color: #ff0066;
 }
 
 .form-control {
@@ -80,64 +70,82 @@ span {
 }
 
 .loader {
-  animation: loader 5s cubic-bezier(.8,0,.2,1) infinite;
-  height: 40px;
-  width: 41px;
-  position: absolute;
-  top: 8vw;
-  left:calc(50% - 20px);
+    animation: loader 5s cubic-bezier(.8, 0, .2, 1) infinite;
+    height: 40px;
+    width: 41px;
+    position: absolute;
+    top: 8vw;
+    left: calc(50% - 20px);
 }
 
 @keyframes loader {
-  90% { transform: rotate(0deg); }
-  100% { transform: rotate(180deg); }
+    90% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
 }
 
 .top {
-  animation: top 5s linear infinite;
-  border-top: 20px solid #ff0066;
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  height: 0px;
-  width: 1px;
-  transform-origin: 50% 100%;
+    animation: top 5s linear infinite;
+    border-top: 20px solid #ff0066;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    height: 0px;
+    width: 1px;
+    transform-origin: 50% 100%;
 }
 
 @keyframes top {
-  90% { transform: scale(0); }
-  100% { transform: scale(0);}
+    90% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0);
+    }
 }
 
 .bottom {
-  animation: bottom 5s linear infinite;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid #ff0066;
-  border-left: 20px solid transparent;
-  height: 0px;
-  width: 1px;
-  transform: scale(0);
-  transform-origin: 50% 100%;
+    animation: bottom 5s linear infinite;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #ff0066;
+    border-left: 20px solid transparent;
+    height: 0px;
+    width: 1px;
+    transform: scale(0);
+    transform-origin: 50% 100%;
 }
 
 @keyframes bottom {
-  10% { transform: scale(0); }
-  90% { transform: scale(1); }
-  100% { transform: scale(1); }
+    10% {
+        transform: scale(0);
+    }
+    90% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .line {
-  animation: line 5s linear infinite;
-  border-left: 1px dotted #ff0066;
-  height: 0px;
-  width: 0px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
+    animation: line 5s linear infinite;
+    border-left: 1px dotted #ff0066;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 @keyframes line {
-  10% { height: 20px; }
-  100% { height: 20px; }
+    10% {
+        height: 20px;
+    }
+    100% {
+        height: 20px;
+    }
 }
 
 i {
