@@ -1,5 +1,5 @@
 ## Countdown__App
-A simple countdown app built with React
+A simple countdown app built with React as a part of [Udemy course](https://www.udemy.com/react-js-and-redux-mastering-web-apps/learn/v4/overview) by David Katz
 
 ## Demo
 [Click here to check it out](https://mongru.github.io/Countdown__App/)
