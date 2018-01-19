@@ -38,6 +38,12 @@ class Clock extends React.Component {
 
     render() {
         const { days, hours, minutes, seconds } = this.state;
+
+        if (days < 0) {
+            return (
+                <h1>Time's up!</h1>
+            );
+        }
         return (
             <div>
                 <div className="Clock-days"><span>{this.leading0(days)} </span>

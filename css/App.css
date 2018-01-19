@@ -3,16 +3,17 @@ body {
     justify-content: center;
     overflow-x: hidden;
     height: 100vh;
+    color: #352482;
     background: rgba(255, 255, 255, 0.36);
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.36) 0%, rgba(255, 173, 216, 0.36) 32%, #ff0066 100%);
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.36) 0%, rgba(255, 173, 216, 0.36) 32%, #ff0066 100%);
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.36) 0%, rgba(255, 173, 216, 0.36) 32%, #ff0066 100%);
-    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.36) 0%, rgba(255, 173, 216, 0.36) 32%, #ff0066 100%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.36) 0%, rgba(255, 173, 216, 0.36) 32%, #ff0066 100%);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.36) 0%, rgb(137,243,236) 32%, #4933ef 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.36) 0%, rgb(137,243,236) 32%, #4933ef 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.36) 0%, rgb(137,243,236)) 32%, #4933ef 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.36) 0%, rgb(137,243,236) 32%, #4933ef 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.36) 0%, rgb(137,243,236) 32%, #4933ef 100%);
 }
 
 span {
-    color: #ff0066;
+    color: #4933ef;
 }
 
 .Template {
@@ -44,28 +45,42 @@ span {
 }
 
 .Clock-days>span, .Clock-hours>span, .Clock-minutes>span, .Clock-seconds>span {
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 4vw;
-    display: inline-block;
+    /* display: inline-block;
     width: 8vw;
     height: 8vw;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 20px 30px 20px 10px;
-    border-radius: 50%;
+    border-radius: 50%; */
 }
 
-.Deadline-input {
+/* .Deadline-input {
     font-size: 25px;
     margin: 5px;
+} */
+
+/* .btn__submit {
+    background-color: #fc5757;
+    color: #352482;
+    border-radius: 0;
+    border: none;
 }
 
+.btn__submit:hover {
+    background-color: #4933ef;
+    color: rgb(137,243,236);
+} */
+
 .Deadline-input::placeholder {
-    font-size: 12px;
-    color: #ff0066;
+    font-size: 14px;
+    color: rgb(137,243,236);
+    padding: 10px 0;
+    border: 4px;
 }
 
 .form-control {
-    color: #ff0066;
+    color: #352482;
     font-size: 2rem;
 }
 
@@ -89,7 +104,7 @@ span {
 
 .top {
     animation: top 5s linear infinite;
-    border-top: 20px solid #ff0066;
+    border-top: 20px solid #4933ef;
     border-right: 20px solid transparent;
     border-left: 20px solid transparent;
     height: 0px;
@@ -109,7 +124,7 @@ span {
 .bottom {
     animation: bottom 5s linear infinite;
     border-right: 20px solid transparent;
-    border-bottom: 20px solid #ff0066;
+    border-bottom: 20px solid #4933ef;
     border-left: 20px solid transparent;
     height: 0px;
     width: 1px;
@@ -131,7 +146,7 @@ span {
 
 .line {
     animation: line 5s linear infinite;
-    border-left: 1px dotted #ff0066;
+    border-left: 1px dotted #4933ef;
     height: 0px;
     width: 0px;
     position: absolute;

@@ -14,7 +14,7 @@ class Template extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            deadline: 'December 31, 2017',
+            deadline: 'December 31, 2018',
             newDeadline: '',
             formOk: true
     }
@@ -50,8 +50,8 @@ class Template extends React.Component {
                     {
                         !formOk ? <p style={{fontSize: "12px", color: "navy"}}>Please enter a valid date in the following format: Month Day, Year</p> : ''
                     }
-                    <FormControl className="Deadline-input" placeholder='December 31, 2017' onChange={event => this.setState({newDeadline: event.target.value})}/>
-                    <Button onClick={(e) => this.changeDeadline(e)}>Submit</Button>
+                    <FormControl className="Deadline-input" placeholder='December 31, 2018' onChange={event => this.setState({newDeadline: event.target.value})}/>
+                    <Button className="btn__submit" onClick={(e) => this.changeDeadline(e)}>Submit</Button>
                 </Form>
                 <Footer />
             </div>
