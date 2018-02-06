@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --output-public-path=/dist/ --inline --hot",
-    "build": "webpack --config  webpack.config.js --watch"
+    "build": "webpack -p"
   },
   "browserlist": [
     "> 1%",
